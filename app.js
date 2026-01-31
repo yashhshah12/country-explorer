@@ -39,9 +39,9 @@ countryGrid.innerHTML = ""
     countryCard.innerHTML = `  <img src="${countryflag}" alt="">
                                       <div class="details">
                                             <h3>${countryname}</h3>
-                                            <p><strong>Population ${countryPopulation}</strong></p>
-                                            <p><strong>Region ${countryregion}</strong></p>
-                                            <p><strong>Capital ${countrycapital}</strong></p>
+                                            <p><strong>Population:</strong> ${countryPopulation.toLocaleString()}</p>
+                                            <p><strong>Region:</strong> ${countryregion}</p>
+                                            <p><strong>Capital:</strong> ${countrycapital}</p>
                 
                                             </div>`
                                     
@@ -53,7 +53,7 @@ countryGrid.innerHTML = ""
 
 function searchCard (){
 let filtervalue = filtercountry.value;
-let query = searchinput.value.toLowerCase();
+let query = searchinput.value.toLowerCase() || "";
 console.log( "This is filter value ", filtervalue);
 
 let result  = countryarr;
@@ -64,23 +64,37 @@ if (filtervalue != "All") {
 if (query) {
     result = result.filter(c => c?.name?.common.toLowerCase().includes(query))
 }
+console.log(query);
 
 
 displayCountry(result)
-console.log(result);
+
 
 }
 filtercountry.addEventListener("change", searchCard)
-searchinput.addEventListener("input", searchCard)
+function debounce (fn, delay =500) {
+    let timer;
+    return function (...args) {
+          clearTimeout(timer);
+         timer = setTimeout(() => {
+          fn.apply(this, args)
+
+        }, delay);
+    }
+}
+let debounceSearch = debounce(searchCard , 1000);
+
+searchinput.addEventListener("input", debounceSearch)
 
 
 darkMode.addEventListener("click",()=>{
 document.body.classList.toggle("dark")
-const isDark = document.body.contains("dark");
+const isDark = document.body.classList.contains("dark");
 if (isDark) {
-    darkMode.textContent = "☀️ Light Mode"
+    darkMode.textContent = "☀️ Light Mode";
 }else{
     darkMode.textContent= "🌙 Dark Mode";
 }
 
 })
+
