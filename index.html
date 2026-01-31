@@ -8,13 +8,13 @@
 <link rel="stylesheet" href="style.css">
 <body>
     <header>
-        <h2>Country-explorer</h2>
-        <button>Dark mode</button>
+        <h2>Country Explorer</h2>
+        <button id="dark-mode">🌙 Dark Mode</button>
     </header>
-    <!-- <main>
-        <div>
-            <input type="text" name="" id="" aria-label="search-country">
-            <select name="" id="">
+    <main>
+        <div class="control">
+            <input type="text" name="" id="search-country" placeholder="Search for your country..." aria-label="search-country">
+            <select name="" id="filter" >
                 <option value="All">Filter by Region</option>
                 <option value="Asia">Asia</option>
                 <option value="Africe">Africa</option>
@@ -24,9 +24,9 @@
             </select>
         </div>
         <div class="grid" id="country-grid">
-
+            
         </div>
-    </main> -->
+    </main>
 </body>
-<script src="api.js"></script>
+<script src="app.js" type="module"></script>
 </html>
