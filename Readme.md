@@ -11,14 +11,15 @@ Each Country Card displays 5 key data points:
 
 The app allows users to search for specific countries or filter them by region. When a user interacts with the search bar or dropdown, the grid dynamically updates to show only the relevant country or group of countries.
 
-## 🚀 Features
-1. **Region Filter:** Filter countries by specific continents (e.g., Asia, Europe).
-2. **Search Functionality:** Real-time search by country name.
-3. **Dark / Light Mode:** Toggles UI themes for better user experience.
-4. **Responsive UI:** Fully responsive grid layout that adapts to mobile and desktop screens.
-5. **Live Data:** Fetches real-time country data from the Rest Countries API.
-6. **Error Handling:** Displays a user-friendly error message when no countries match the search.
-7. **Modular Code:** Built with clean, ES6+ JavaScript using module architecture.
+  ## 🚀 Features
+  1. **Region Filter:** Filter countries by specific continents (e.g., Asia, Europe).
+  2. **Search Functionality:** Real-time search by country name.
+  3. **Dark / Light Mode:** Toggles UI themes for better user experience.
+  4. **Responsive UI:** Fully responsive grid layout that adapts to mobile and desktop screens.
+  5. **Live Data:** Fetches real-time country data from the Rest Countries API.
+  6. Sticky Search Bar (Glassmorphism): The search and filter controls stick to the top of the screen while scrolling, using a backdrop-filter blur effect for a modern, translucent look.
+  7. **Error Handling:** Displays a user-friendly error message when no countries match the search.
+  8. **Modular Code:** Built with clean, ES6+ JavaScript using module architecture.
 
 ## 🛠️ Tech Stack
 * **HTML5** (Semantic structure)
@@ -36,7 +37,7 @@ The app allows users to search for specific countries or filter them by region. 
 
 ## 📂 Project Structure 
 * **index.html** → Main UI structure (Header, Search, Grid).
-* **style.css** → Controls responsive design, card styling, and Dark/Light themes.
+* **style.css** → Controls responsive design, Dark/Light themes, and modern glassmorphism effects for the sticky header.
 * **app.js** → Core logic: DOM manipulation, Event Listeners, Debounce, and Search/Filter logic.
 * **api.js** → API handling: `fetch` requests, error management, and BASE URL configuration.
 
