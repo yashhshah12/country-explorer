@@ -87,7 +87,7 @@ To keep the page fast (60fps), we use `DocumentFragment`:
 [View Live Project](https://admirable-fox-4efe44.netlify.app/)
 
 ## 🧠 What I Learned
-* **Advanced Array Methods:** Mastering `.filter()` and `.map()` for data manipulation.
+* **Advanced Array Methods:** Mastering `.filter()` for data manipulation.
 * **Performance:** Implementing **Debouncing** to optimize event handling.
 * **DOM Efficiency:** Using `DocumentFragment` for high-performance rendering.
 * **Asynchronous JS:** Managing API states with `async/await` and `try/catch`.
