@@ -102,5 +102,6 @@ cursor: pointer;
     grid-column: 1 / -1;
     text-align: center;
     opacity: 0.75;
+    color: var(--text);
 }
 
