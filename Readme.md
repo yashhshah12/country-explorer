@@ -84,7 +84,7 @@ To keep the page fast (60fps), we use `DocumentFragment`:
 * **Fields Used:** `name`, `flags`, `region`, `population`, `capital`
 
 ## 🌐 Live Demo
-[View Live Project](https://stirring-tanuki-48d6bc.netlify.app/)
+[View Live Project](https://admirable-fox-4efe44.netlify.app/)
 
 ## 🧠 What I Learned
 * **Advanced Array Methods:** Mastering `.filter()` and `.map()` for data manipulation.
